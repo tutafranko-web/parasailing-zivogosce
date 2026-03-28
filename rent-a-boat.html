@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent a Boat Živogošće Porat — Najam brodova na Makarskoj rivijeri</title>
+  <meta name="description" content="Rent a boat u Živogošću — iznajmite brod i istražite skrivene uvale, obalu Makarske rivijere i pogled na Hvar. Najam brodova na plaži Porat.">
+  <meta name="keywords" content="rent a boat Živogošće, najam broda Makarska rivijera, boat rental Croatia, iznajmljivanje brodova Jadran, boat hire Živogošće">
+  <meta name="author" content="Parasailing & Rent a Boat Živogošće Porat">
+  <meta name="theme-color" content="#0F172A">
+  <meta name="geo.region" content="HR-17">
+  <meta name="geo.placename" content="Živogošće">
+  <meta name="geo.position" content="43.1580;17.1650">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚤</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rent a Boat — Parasailing & Rent a Boat Živogošće Porat">
+  <meta property="og:description" content="Iznajmite brod i istražite Makarsku rivijeru — skrivene uvale, otoke i kristalno čisto more.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ocean: { 50:'#f0f9ff', 100:'#e0f2fe', 200:'#bae6fd', 300:'#7dd3fc', 400:'#38bdf8', 500:'#0ea5e9', 600:'#0284c7', 700:'#0369a1', 800:'#075985', 900:'#0c4a6e' },
+            sand: { 400:'#fbbf24', 500:'#f59e0b', 600:'#d97706' },
+            navy: { 900:'#0F172A', 800:'#1E293B', 700:'#334155' }
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Rent a Boat Živogošće",
+    "description": "Boat rental service at Porat Beach, Živogošće on the Makarska Riviera. Explore hidden coves and islands.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Parasailing & Rent a Boat Živogošće Porat",
+      "telephone": "+385 98 293 352",
+      "email": "nenadperic725@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plaža Porat",
+        "addressLocality": "Živogošće",
+        "addressRegion": "Splitsko-dalmatinska",
+        "addressCountry": "HR"
+      }
+    }
+  }
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2">
+          <span class="text-3xl">🪂</span>
+          <span class="text-white font-bold text-lg hidden sm:block">Parasailing Živogošće</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="index.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-home">Početna</a>
+
+          <!-- Services Dropdown -->
+          <div id="services-dropdown" class="relative">
+            <button class="text-white/90 hover:text-white font-medium transition flex items-center gap-1" data-i18n="nav-services">
+              Usluge
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="services-panel" class="hidden absolute top-full left-0 mt-2 w-48 bg-navy-900/95 backdrop-blur-lg rounded-xl shadow-xl border border-white/10 py-2">
+              <a href="parasailing.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-parasailing">Parasailing</a>
+              <a href="rent-a-boat.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-boat">Rent a Boat</a>
+              <a href="jet-ski.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-jetski">Jet Ski</a>
+              <a href="banana-ride.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-banana">Banana Ride</a>
+              <a href="tubing.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-tubing">Tubing</a>
+            </div>
+          </div>
+
+          <a href="about.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-about">O nama</a>
+          <a href="gallery.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-gallery">Galerija</a>
+          <a href="reviews.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-reviews">Recenzije</a>
+          <a href="contact.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-contact">Kontakt</a>
+
+          <!-- Language Toggle -->
+          <div class="flex items-center bg-white/10 rounded-full p-1 ml-2">
+            <button class="lang-btn px-3 py-1 rounded-full text-sm font-medium" data-lang="hr" onclick="setLanguage('hr')">HR</button>
+            <button class="lang-btn px-3 py-1 rounded-full text-sm font-medium" data-lang="en" onclick="setLanguage('en')">EN</button>
+          </div>
+
+          <a href="contact.html" class="bg-sand-500 hover:bg-sand-600 text-white px-5 py-2.5 rounded-full font-semibold transition cta-pulse" data-i18n="nav-book">Rezerviraj</a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button id="menu-toggle" class="lg:hidden text-white p-2">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-navy-900/98 backdrop-blur-xl z-50 p-6 lg:hidden">
+      <button id="menu-close" class="absolute top-5 right-5 text-white">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="flex flex-col gap-4 mt-16">
+        <a href="index.html" class="text-white text-lg font-medium" data-i18n="nav-home">Početna</a>
+        <a href="parasailing.html" class="text-white/80 text-lg" data-i18n="nav-parasailing">Parasailing</a>
+        <a href="rent-a-boat.html" class="text-white/80 text-lg" data-i18n="nav-boat">Rent a Boat</a>
+        <a href="jet-ski.html" class="text-white/80 text-lg" data-i18n="nav-jetski">Jet Ski</a>
+        <a href="banana-ride.html" class="text-white/80 text-lg" data-i18n="nav-banana">Banana Ride</a>
+        <a href="tubing.html" class="text-white/80 text-lg" data-i18n="nav-tubing">Tubing</a>
+        <hr class="border-white/10">
+        <a href="about.html" class="text-white text-lg font-medium" data-i18n="nav-about">O nama</a>
+        <a href="gallery.html" class="text-white text-lg font-medium" data-i18n="nav-gallery">Galerija</a>
+        <a href="reviews.html" class="text-white text-lg font-medium" data-i18n="nav-reviews">Recenzije</a>
+        <a href="contact.html" class="text-white text-lg font-medium" data-i18n="nav-contact">Kontakt</a>
+        <div class="flex items-center gap-2 mt-4">
+          <button class="lang-btn px-4 py-2 rounded-full text-sm font-medium border border-white/20" data-lang="hr" onclick="setLanguage('hr')">HR</button>
+          <button class="lang-btn px-4 py-2 rounded-full text-sm font-medium border border-white/20" data-lang="en" onclick="setLanguage('en')">EN</button>
+        </div>
+        <a href="contact.html" class="bg-sand-500 text-white text-center px-5 py-3 rounded-full font-semibold mt-4" data-i18n="nav-book">Rezerviraj</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="relative min-h-[70vh] flex items-center justify-center wave-divider" style="background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 30%, #0ea5e9 60%, #38bdf8 100%);">
+    <div class="service-hero-overlay absolute inset-0"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-sand-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-40 right-10 w-96 h-96 bg-ocean-400/10 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <p class="text-ocean-200 text-lg md:text-xl mb-4 tracking-wider uppercase" data-aos="fade-down"
+         data-hr="Plaža Porat, Živogošće • Makarska rivijera"
+         data-en="Porat Beach, Živogošće • Makarska Riviera">Plaža Porat, Živogošće • Makarska rivijera</p>
+
+      <h1 class="text-white text-4xl sm:text-5xl md:text-7xl font-black leading-tight mb-6" data-aos="fade-up">
+        <span class="gradient-text">Rent a Boat</span>
+      </h1>
+
+      <p class="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100"
+         data-hr="Iznajmite brod i otkrijte skrivene uvale, kristalno čisto more i prekrasnu obalu Makarske rivijere."
+         data-en="Rent a boat and discover hidden coves, crystal clear waters, and the stunning Makarska Riviera coastline.">
+        Iznajmite brod i otkrijte skrivene uvale, kristalno čisto more i prekrasnu obalu Makarske rivijere.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+        <a href="contact.html" class="bg-sand-500 hover:bg-sand-600 text-white px-8 py-4 rounded-full font-bold text-lg transition cta-pulse"
+           data-hr="Rezerviraj brod" data-en="Book a Boat">Rezerviraj brod</a>
+        <a href="#boat-types" class="border-2 border-white/30 hover:border-white/60 text-white px-8 py-4 rounded-full font-semibold text-lg transition"
+           data-hr="Pogledaj brodove" data-en="View Boats">Pogledaj brodove</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DESCRIPTION ===== -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <p class="text-ocean-500 font-semibold tracking-wider uppercase mb-2"
+             data-hr="Istražite obalu" data-en="Explore the Coast">Istražite obalu</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-6"
+              data-hr="Vaša avantura na moru počinje ovdje" data-en="Your Sea Adventure Starts Here">Vaša avantura na moru počinje ovdje</h2>
+          <p class="text-gray-600 text-lg mb-4"
+             data-hr="S naše plaže Porat u Živogošću krenite u nezaboravnu avanturu duž obale Makarske rivijere. Otkrijte skrivene uvale nedostupne s kopna, uživajte u pogledu na otok Hvar i kupajte se u kristalno čistom moru."
+             data-en="From our Porat Beach in Živogošće, embark on an unforgettable adventure along the Makarska Riviera coastline. Discover hidden coves inaccessible by land, enjoy views of the island of Hvar, and swim in crystal clear waters.">
+            S naše plaže Porat u Živogošću krenite u nezaboravnu avanturu duž obale Makarske rivijere. Otkrijte skrivene uvale nedostupne s kopna, uživajte u pogledu na otok Hvar i kupajte se u kristalno čistom moru.
+          </p>
+          <p class="text-gray-600 text-lg"
+             data-hr="Bilo da želite mirno istraživanje obale ili uzbudljivu vožnju gliserom, imamo pravi brod za vas. Savršeno za parove, obitelji i grupe prijatelja."
+             data-en="Whether you want a peaceful coastal exploration or an exciting speedboat ride, we have the right boat for you. Perfect for couples, families, and groups of friends.">
+            Bilo da želite mirno istraživanje obale ili uzbudljivu vožnju gliserom, imamo pravi brod za vas. Savršeno za parove, obitelji i grupe prijatelja.
+          </p>
+        </div>
+        <div class="relative" data-aos="fade-left">
+          <div class="placeholder-img w-full h-80 rounded-2xl shadow-xl text-white text-xl font-semibold">
+            <span data-hr="Fotografija broda" data-en="Boat Photo">Fotografija broda</span>
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-ocean-500 text-white p-4 rounded-xl shadow-lg hidden md:block">
+            <p class="text-2xl font-bold">🚤</p>
+            <p class="text-sm font-semibold" data-hr="Bez dozvole za male brodove" data-en="No license for small boats">Bez dozvole za male brodove</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOAT TYPES ===== -->
+  <section id="boat-types" class="py-20 lg:py-28 bg-ocean-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="text-ocean-500 font-semibold tracking-wider uppercase mb-2"
+           data-hr="Naša flota" data-en="Our Fleet">Naša flota</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-navy-900"
+            data-hr="Odaberite svoj brod" data-en="Choose Your Boat">Odaberite svoj brod</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Boat 1 — Small Boat -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up">
+          <div class="placeholder-img h-52 text-white text-lg font-semibold">
+            <span data-hr="Mali brod" data-en="Small Boat">Mali brod</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-navy-900 mb-2"
+                data-hr="Mali brod (bez dozvole)" data-en="Small Boat (no license)">Mali brod (bez dozvole)</h3>
+            <p class="text-gray-600 mb-4"
+               data-hr="Idealan za mirno istraživanje obale u paru ili s obitelji. Motor do 5 KS — dozvola nije potrebna."
+               data-en="Perfect for a peaceful coastal exploration with a partner or family. Engine up to 5 HP — no license required.">
+              Idealan za mirno istraživanje obale u paru ili s obitelji. Motor do 5 KS — dozvola nije potrebna.
+            </p>
+            <ul class="text-gray-500 text-sm space-y-1 mb-4">
+              <li data-hr="✓ Do 4 osobe" data-en="✓ Up to 4 persons">✓ Do 4 osobe</li>
+              <li data-hr="✓ Motor do 5 KS" data-en="✓ Engine up to 5 HP">✓ Motor do 5 KS</li>
+              <li data-hr="✓ Dozvola nije potrebna" data-en="✓ No license required">✓ Dozvola nije potrebna</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Boat 2 — Speedboat -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <div class="placeholder-img h-52 text-white text-lg font-semibold">
+            <span data-hr="Gliser" data-en="Speedboat">Gliser</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-navy-900 mb-2"
+                data-hr="Gliser (s dozvolom)" data-en="Speedboat (license required)">Gliser (s dozvolom)</h3>
+            <p class="text-gray-600 mb-4"
+               data-hr="Za one koji traže brzinu i adrenalin. Brza vožnja do udaljenih uvala i otoka. Potrebna brodska dozvola."
+               data-en="For those seeking speed and adrenaline. Fast rides to remote coves and islands. Boat license required.">
+              Za one koji traže brzinu i adrenalin. Brza vožnja do udaljenih uvala i otoka. Potrebna brodska dozvola.
+            </p>
+            <ul class="text-gray-500 text-sm space-y-1 mb-4">
+              <li data-hr="✓ Do 6 osoba" data-en="✓ Up to 6 persons">✓ Do 6 osoba</li>
+              <li data-hr="✓ Snažan motor" data-en="✓ Powerful engine">✓ Snažan motor</li>
+              <li data-hr="✓ Brodska dozvola potrebna" data-en="✓ Boat license required">✓ Brodska dozvola potrebna</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Boat 3 — Pasara -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+          <div class="placeholder-img h-52 text-white text-lg font-semibold">
+            <span data-hr="Pasara" data-en="Traditional Boat">Pasara</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-navy-900 mb-2"
+                data-hr="Pasara (tradicionalni brod)" data-en="Pasara (Traditional Boat)">Pasara (tradicionalni brod)</h3>
+            <p class="text-gray-600 mb-4"
+               data-hr="Autentično dalmatinsko iskustvo. Uživajte u laganoj plovidbi tradicionalnom drvenom pašarom uz obalu."
+               data-en="An authentic Dalmatian experience. Enjoy a leisurely cruise in a traditional wooden boat along the coast.">
+              Autentično dalmatinsko iskustvo. Uživajte u laganoj plovidbi tradicionalnom drvenom pašarom uz obalu.
+            </p>
+            <ul class="text-gray-500 text-sm space-y-1 mb-4">
+              <li data-hr="✓ Do 5 osoba" data-en="✓ Up to 5 persons">✓ Do 5 osoba</li>
+              <li data-hr="✓ Tradicionalni dizajn" data-en="✓ Traditional design">✓ Tradicionalni dizajn</li>
+              <li data-hr="✓ Dozvola nije potrebna" data-en="✓ No license required">✓ Dozvola nije potrebna</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT YOU CAN EXPLORE ===== -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="text-ocean-500 font-semibold tracking-wider uppercase mb-2"
+           data-hr="Destinacije" data-en="Destinations">Destinacije</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-navy-900"
+            data-hr="Što možete istražiti" data-en="What You Can Explore">Što možete istražiti</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Destination 1 -->
+        <div class="bg-ocean-50 rounded-2xl p-6 text-center service-card" data-aos="fade-up">
+          <div class="text-4xl mb-4">🏖️</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2"
+              data-hr="Skrivene uvale" data-en="Hidden Coves">Skrivene uvale</h3>
+          <p class="text-gray-600 text-sm"
+             data-hr="Otkrijte mirne uvale nedostupne s kopna, savršene za kupanje i ronjenje u privatnosti."
+             data-en="Discover tranquil coves inaccessible by land, perfect for swimming and snorkeling in privacy.">
+            Otkrijte mirne uvale nedostupne s kopna, savršene za kupanje i ronjenje u privatnosti.
+          </p>
+        </div>
+
+        <!-- Destination 2 -->
+        <div class="bg-ocean-50 rounded-2xl p-6 text-center service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-4xl mb-4">🌊</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2"
+              data-hr="Makarska i Brela" data-en="Makarska & Brela">Makarska i Brela</h3>
+          <p class="text-gray-600 text-sm"
+             data-hr="Plovite do najljepših plaža rivijere — Punta Rata u Breli i šetnica u Makarskoj."
+             data-en="Sail to the most beautiful beaches on the Riviera — Punta Rata in Brela and the Makarska promenade.">
+            Plovite do najljepših plaža rivijere — Punta Rata u Breli i šetnica u Makarskoj.
+          </p>
+        </div>
+
+        <!-- Destination 3 -->
+        <div class="bg-ocean-50 rounded-2xl p-6 text-center service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl mb-4">⛱️</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2"
+              data-hr="Tučepi i Podgora" data-en="Tučepi & Podgora">Tučepi i Podgora</h3>
+          <p class="text-gray-600 text-sm"
+             data-hr="Istražite šljunčane plaže Tučepa i slikovitu luku u Podgori s pogledom na Biokovo."
+             data-en="Explore the pebble beaches of Tučepi and the picturesque harbor of Podgora with Biokovo views.">
+            Istražite šljunčane plaže Tučepa i slikovitu luku u Podgori s pogledom na Biokovo.
+          </p>
+        </div>
+
+        <!-- Destination 4 -->
+        <div class="bg-ocean-50 rounded-2xl p-6 text-center service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-4xl mb-4">🏝️</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2"
+              data-hr="Pogled na Hvar" data-en="Hvar Island Views">Pogled na Hvar</h3>
+          <p class="text-gray-600 text-sm"
+             data-hr="Uživajte u spektakularnom pogledu na otok Hvar dok plovite duž obale. Nezaboravan doživljaj!"
+             data-en="Enjoy spectacular views of Hvar island as you cruise along the coast. An unforgettable experience!">
+            Uživajte u spektakularnom pogledu na otok Hvar dok plovite duž obale. Nezaboravan doživljaj!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="py-20 lg:py-28 bg-navy-900 text-white wave-divider-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="text-ocean-400 font-semibold tracking-wider uppercase mb-2"
+           data-hr="Cjenik" data-en="Pricing">Cjenik</p>
+        <h2 class="text-3xl md:text-5xl font-bold"
+            data-hr="Cijene najma" data-en="Rental Prices">Cijene najma</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Hourly -->
+        <div class="pricing-card bg-navy-800 rounded-2xl p-8 text-center" data-aos="fade-up">
+          <h3 class="text-xl font-bold mb-2" data-hr="Po satu" data-en="Per Hour">Po satu</h3>
+          <div class="text-5xl font-black text-ocean-400 my-6">
+            <span data-hr="od 30€" data-en="from €30">od 30€</span>
+          </div>
+          <ul class="text-white/60 space-y-3 mb-8 text-sm">
+            <li data-hr="1 sat plovidbe" data-en="1 hour of boating">1 sat plovidbe</li>
+            <li data-hr="Gorivo uključeno" data-en="Fuel included">Gorivo uključeno</li>
+            <li data-hr="Kratko istraživanje obale" data-en="Short coastal exploration">Kratko istraživanje obale</li>
+          </ul>
+          <a href="contact.html" class="block border-2 border-ocean-500 text-ocean-400 hover:bg-ocean-500 hover:text-white px-6 py-3 rounded-full font-semibold transition"
+             data-hr="Kontaktirajte nas" data-en="Contact Us">Kontaktirajte nas</a>
+        </div>
+
+        <!-- Half Day — Featured -->
+        <div class="pricing-card featured bg-navy-800 rounded-2xl p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-sand-500 text-white text-xs font-bold px-4 py-1 rounded-full uppercase"
+               data-hr="Najpopularnije" data-en="Most Popular">Najpopularnije</div>
+          <h3 class="text-xl font-bold mb-2 mt-2" data-hr="Pola dana" data-en="Half Day">Pola dana</h3>
+          <div class="text-5xl font-black text-sand-500 my-6">
+            <span data-hr="od 100€" data-en="from €100">od 100€</span>
+          </div>
+          <ul class="text-white/60 space-y-3 mb-8 text-sm">
+            <li data-hr="4 sata plovidbe" data-en="4 hours of boating">4 sata plovidbe</li>
+            <li data-hr="Gorivo uključeno" data-en="Fuel included">Gorivo uključeno</li>
+            <li data-hr="Posjeti više lokacija" data-en="Visit multiple locations">Posjeti više lokacija</li>
+            <li data-hr="Oprema za kupanje" data-en="Swimming equipment">Oprema za kupanje</li>
+          </ul>
+          <a href="contact.html" class="block bg-sand-500 hover:bg-sand-600 text-white px-6 py-3 rounded-full font-semibold transition"
+             data-hr="Rezerviraj" data-en="Book Now">Rezerviraj</a>
+        </div>
+
+        <!-- Full Day -->
+        <div class="pricing-card bg-navy-800 rounded-2xl p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-bold mb-2" data-hr="Cijeli dan" data-en="Full Day">Cijeli dan</h3>
+          <div class="text-5xl font-black text-ocean-400 my-6">
+            <span data-hr="od 180€" data-en="from €180">od 180€</span>
+          </div>
+          <ul class="text-white/60 space-y-3 mb-8 text-sm">
+            <li data-hr="8 sati plovidbe" data-en="8 hours of boating">8 sati plovidbe</li>
+            <li data-hr="Gorivo uključeno" data-en="Fuel included">Gorivo uključeno</li>
+            <li data-hr="Istražite cijelu rivijeru" data-en="Explore the entire Riviera">Istražite cijelu rivijeru</li>
+            <li data-hr="Oprema za kupanje" data-en="Swimming equipment">Oprema za kupanje</li>
+            <li data-hr="Najbolja vrijednost" data-en="Best value">Najbolja vrijednost</li>
+          </ul>
+          <a href="contact.html" class="block border-2 border-ocean-500 text-ocean-400 hover:bg-ocean-500 hover:text-white px-6 py-3 rounded-full font-semibold transition"
+             data-hr="Kontaktirajte nas" data-en="Contact Us">Kontaktirajte nas</a>
+        </div>
+      </div>
+
+      <p class="text-center text-white/40 text-sm mt-8" data-aos="fade-up"
+         data-hr="* Cijene su okvirne i ovise o tipu broda i sezoni. Kontaktirajte nas za točan cjenik."
+         data-en="* Prices are approximate and depend on boat type and season. Contact us for exact pricing.">
+        * Cijene su okvirne i ovise o tipu broda i sezoni. Kontaktirajte nas za točan cjenik.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== REQUIREMENTS ===== -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="text-ocean-500 font-semibold tracking-wider uppercase mb-2"
+           data-hr="Važno znati" data-en="Important Info">Važno znati</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-navy-900"
+            data-hr="Uvjeti najma" data-en="Rental Requirements">Uvjeti najma</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- No License -->
+        <div class="bg-green-50 border-2 border-green-200 rounded-2xl p-8" data-aos="fade-up">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="step-number bg-green-500 text-white">✓</div>
+            <h3 class="text-xl font-bold text-navy-900"
+                data-hr="Bez dozvole" data-en="No License Needed">Bez dozvole</h3>
+          </div>
+          <p class="text-gray-600 mb-4"
+             data-hr="Za male brodove s motorom do 5 KS nije potrebna brodska dozvola. Savršeno za početnike i obitelji."
+             data-en="For small boats with engines up to 5 HP, no boat license is required. Perfect for beginners and families.">
+            Za male brodove s motorom do 5 KS nije potrebna brodska dozvola. Savršeno za početnike i obitelji.
+          </p>
+          <ul class="text-gray-500 text-sm space-y-2">
+            <li data-hr="• Motor do 5 KS" data-en="• Engine up to 5 HP">• Motor do 5 KS</li>
+            <li data-hr="• Kratke upute prije plovidbe" data-en="• Brief instructions before departure">• Kratke upute prije plovidbe</li>
+            <li data-hr="• Sigurnosna oprema uključena" data-en="• Safety equipment included">• Sigurnosna oprema uključena</li>
+            <li data-hr="• Minimalna dob: 18 godina" data-en="• Minimum age: 18 years">• Minimalna dob: 18 godina</li>
+          </ul>
+        </div>
+
+        <!-- License Required -->
+        <div class="bg-ocean-50 border-2 border-ocean-200 rounded-2xl p-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="step-number bg-ocean-500 text-white">📋</div>
+            <h3 class="text-xl font-bold text-navy-900"
+                data-hr="Potrebna dozvola" data-en="License Required">Potrebna dozvola</h3>
+          </div>
+          <p class="text-gray-600 mb-4"
+             data-hr="Za glisere i brodove s jačim motorom potrebna je valjana brodska dozvola (boat license / Küstenschein)."
+             data-en="For speedboats and boats with more powerful engines, a valid boat license is required.">
+            Za glisere i brodove s jačim motorom potrebna je valjana brodska dozvola (boat license / Küstenschein).
+          </p>
+          <ul class="text-gray-500 text-sm space-y-2">
+            <li data-hr="• Motor iznad 5 KS" data-en="• Engine above 5 HP">• Motor iznad 5 KS</li>
+            <li data-hr="• Potrebna valjana brodska dozvola" data-en="• Valid boat license required">• Potrebna valjana brodska dozvola</li>
+            <li data-hr="• Prihvaćamo hrvatske i međunarodne dozvole" data-en="• Croatian and international licenses accepted">• Prihvaćamo hrvatske i međunarodne dozvole</li>
+            <li data-hr="• Osobna iskaznica ili putovnica" data-en="• ID card or passport">• Osobna iskaznica ili putovnica</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="py-20 lg:py-28 wave-divider" style="background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 50%, #0ea5e9 100%);">
+    <div class="service-hero-overlay absolute inset-0"></div>
+    <div class="relative z-10 max-w-4xl mx-auto text-center px-4">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6" data-aos="fade-up"
+          data-hr="Spremni za plovidbu?" data-en="Ready to Set Sail?">Spremni za plovidbu?</h2>
+      <p class="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100"
+         data-hr="Kontaktirajte nas i rezervirajte svoj brod za nezaboravno iskustvo na Makarskoj rivijeri. Dostupni smo svaki dan od ožujka do prosinca."
+         data-en="Contact us and book your boat for an unforgettable experience on the Makarska Riviera. Available daily from March to December.">
+        Kontaktirajte nas i rezervirajte svoj brod za nezaboravno iskustvo na Makarskoj rivijeri. Dostupni smo svaki dan od ožujka do prosinca.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+        <a href="contact.html" class="bg-sand-500 hover:bg-sand-600 text-white px-8 py-4 rounded-full font-bold text-lg transition cta-pulse"
+           data-hr="Rezerviraj sada" data-en="Book Now">Rezerviraj sada</a>
+        <a href="tel:+38598293352" class="border-2 border-white/30 hover:border-white/60 text-white px-8 py-4 rounded-full font-semibold text-lg transition"
+           data-hr="📞 Nazovite nas" data-en="📞 Call Us">📞 Nazovite nas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-navy-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-3xl">🪂</span>
+            <span class="font-bold text-lg">Parasailing Živogošće</span>
+          </div>
+          <p class="text-white/60" data-i18n="footer-operator">Operator: Mirino obrt</p>
+          <p class="text-white/60" data-i18n="footer-location">Plaža Porat, Živogošće, Hrvatska</p>
+          <p class="text-white/60" data-i18n="footer-season">Sezona: Ožujak – Prosinac</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4" data-i18n="footer-quick">Brzi linkovi</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="parasailing.html" class="hover:text-white transition">Parasailing</a></li>
+            <li><a href="rent-a-boat.html" class="hover:text-white transition">Rent a Boat</a></li>
+            <li><a href="jet-ski.html" class="hover:text-white transition">Jet Ski</a></li>
+            <li><a href="gallery.html" class="hover:text-white transition" data-i18n="nav-gallery">Galerija</a></li>
+            <li><a href="reviews.html" class="hover:text-white transition" data-i18n="nav-reviews">Recenzije</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4" data-i18n="footer-contact-title">Kontakt</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="tel:+38598293352" class="hover:text-white transition">📞 098 293 352</a></li>
+            <li><a href="mailto:nenadperic725@gmail.com" class="hover:text-white transition">✉️ nenadperic725@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-white/10 mb-6">
+      <p class="text-center text-white/40 text-sm">© 2025 Parasailing & Rent a Boat Živogošće Porat. <span data-i18n="footer-rights">Sva prava pridržana.</span></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

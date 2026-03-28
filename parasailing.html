@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parasailing — Parasailing & Rent a Boat Živogošće Porat</title>
+  <meta name="description" content="Parasailing iznad Jadrana u Živogošću. Letite iznad kristalno čistog mora uz prekrasan pogled na Makarsku rivijeru. Solo, duo ili triple letovi.">
+  <meta name="keywords" content="parasailing Živogošće, parasailing Makarska rivijera, parasailing Croatia, vodeni sportovi, water sports">
+  <meta name="author" content="Parasailing & Rent a Boat Živogošće Porat">
+  <meta name="theme-color" content="#0F172A">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪂</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Parasailing — Parasailing & Rent a Boat Živogošće Porat">
+  <meta property="og:description" content="Letite iznad Jadrana! Parasailing u Živogošću na Makarskoj rivijeri.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ocean: { 50:'#f0f9ff', 100:'#e0f2fe', 200:'#bae6fd', 300:'#7dd3fc', 400:'#38bdf8', 500:'#0ea5e9', 600:'#0284c7', 700:'#0369a1', 800:'#075985', 900:'#0c4a6e' },
+            sand: { 400:'#fbbf24', 500:'#f59e0b', 600:'#d97706' },
+            navy: { 900:'#0F172A', 800:'#1E293B', 700:'#334155' }
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2">
+          <span class="text-3xl">🪂</span>
+          <span class="text-white font-bold text-lg hidden sm:block">Parasailing Živogošće</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="index.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-home">Početna</a>
+
+          <!-- Services Dropdown -->
+          <div id="services-dropdown" class="relative">
+            <button class="text-white/90 hover:text-white font-medium transition flex items-center gap-1" data-i18n="nav-services">
+              Usluge
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="services-panel" class="hidden absolute top-full left-0 mt-2 w-48 bg-navy-900/95 backdrop-blur-lg rounded-xl shadow-xl border border-white/10 py-2">
+              <a href="parasailing.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-parasailing">Parasailing</a>
+              <a href="rent-a-boat.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-boat">Rent a Boat</a>
+              <a href="jet-ski.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-jetski">Jet Ski</a>
+              <a href="banana-ride.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-banana">Banana Ride</a>
+              <a href="tubing.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-tubing">Tubing</a>
+            </div>
+          </div>
+
+          <a href="about.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-about">O nama</a>
+          <a href="gallery.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-gallery">Galerija</a>
+          <a href="reviews.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-reviews">Recenzije</a>
+          <a href="contact.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-contact">Kontakt</a>
+
+          <!-- Language Toggle -->
+          <div class="flex items-center bg-white/10 rounded-full p-1 ml-2">
+            <button class="lang-btn px-3 py-1 rounded-full text-sm font-medium" data-lang="hr" onclick="setLanguage('hr')">HR</button>
+            <button class="lang-btn px-3 py-1 rounded-full text-sm font-medium" data-lang="en" onclick="setLanguage('en')">EN</button>
+          </div>
+
+          <a href="contact.html" class="bg-sand-500 hover:bg-sand-600 text-white px-5 py-2.5 rounded-full font-semibold transition cta-pulse" data-i18n="nav-book">Rezerviraj</a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button id="menu-toggle" class="lg:hidden text-white p-2">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-navy-900/98 backdrop-blur-xl z-50 p-6 lg:hidden">
+      <button id="menu-close" class="absolute top-5 right-5 text-white">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="flex flex-col gap-4 mt-16">
+        <a href="index.html" class="text-white text-lg font-medium" data-i18n="nav-home">Početna</a>
+        <a href="parasailing.html" class="text-white/80 text-lg" data-i18n="nav-parasailing">Parasailing</a>
+        <a href="rent-a-boat.html" class="text-white/80 text-lg" data-i18n="nav-boat">Rent a Boat</a>
+        <a href="jet-ski.html" class="text-white/80 text-lg" data-i18n="nav-jetski">Jet Ski</a>
+        <a href="banana-ride.html" class="text-white/80 text-lg" data-i18n="nav-banana">Banana Ride</a>
+        <a href="tubing.html" class="text-white/80 text-lg" data-i18n="nav-tubing">Tubing</a>
+        <hr class="border-white/10">
+        <a href="about.html" class="text-white text-lg font-medium" data-i18n="nav-about">O nama</a>
+        <a href="gallery.html" class="text-white text-lg font-medium" data-i18n="nav-gallery">Galerija</a>
+        <a href="reviews.html" class="text-white text-lg font-medium" data-i18n="nav-reviews">Recenzije</a>
+        <a href="contact.html" class="text-white text-lg font-medium" data-i18n="nav-contact">Kontakt</a>
+        <div class="flex items-center gap-2 mt-4">
+          <button class="lang-btn px-4 py-2 rounded-full text-sm font-medium border border-white/20" data-lang="hr" onclick="setLanguage('hr')">HR</button>
+          <button class="lang-btn px-4 py-2 rounded-full text-sm font-medium border border-white/20" data-lang="en" onclick="setLanguage('en')">EN</button>
+        </div>
+        <a href="contact.html" class="bg-sand-500 text-white text-center px-5 py-3 rounded-full font-semibold mt-4" data-i18n="nav-book">Rezerviraj</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== SERVICE HERO ===== -->
+  <section class="relative min-h-[70vh] flex items-center justify-center wave-divider" style="background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 30%, #0ea5e9 60%, #38bdf8 100%);">
+    <div class="service-hero-overlay absolute inset-0"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-sand-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-40 right-10 w-96 h-96 bg-ocean-400/10 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
+      <p class="text-ocean-200 text-lg md:text-xl mb-4 tracking-wider uppercase" data-aos="fade-down"
+         data-hr="Plaža Porat, Živogošće" data-en="Porat Beach, Živogošće">Plaža Porat, Živogošće</p>
+
+      <h1 class="text-white text-4xl sm:text-5xl md:text-7xl font-black leading-tight mb-6" data-aos="fade-up">
+        <span class="gradient-text">Parasailing</span>
+      </h1>
+
+      <p class="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100"
+         data-hr="Vinite se iznad kristalno čistog Jadrana i uživajte u nezaboravnom pogledu na Makarsku rivijeru iz ptičje perspektive."
+         data-en="Soar above the crystal-clear Adriatic and enjoy an unforgettable bird's-eye view of the Makarska Riviera.">
+        Vinite se iznad kristalno čistog Jadrana i uživajte u nezaboravnom pogledu na Makarsku rivijeru iz ptičje perspektive.
+      </p>
+
+      <a href="contact.html" class="inline-block bg-sand-500 hover:bg-sand-600 text-white px-8 py-4 rounded-full font-bold text-lg transition cta-pulse" data-aos="fade-up" data-aos-delay="200"
+         data-hr="Rezerviraj let" data-en="Book a Flight">Rezerviraj let</a>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="text-ocean-500 font-semibold tracking-wider uppercase mb-2"
+           data-hr="Kako funkcionira" data-en="How It Works">Kako funkcionira</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-navy-900"
+            data-hr="4 jednostavna koraka" data-en="4 Simple Steps">4 jednostavna koraka</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Step 1 -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="0">
+          <div class="step-number bg-ocean-500 text-white mx-auto mb-4">1</div>
+          <h3 class="text-xl font-bold text-navy-900 mb-2"
+              data-hr="Dolazak na plažu" data-en="Arrive at the Beach">Dolazak na plažu</h3>
+          <p class="text-gray-600"
+             data-hr="Dođite na plažu Porat u Živogošću gdje vas čeka naš tim."
+             data-en="Come to Porat Beach in Živogošće where our team awaits you.">
+            Dođite na plažu Porat u Živogošću gdje vas čeka naš tim.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number bg-ocean-500 text-white mx-auto mb-4">2</div>
+          <h3 class="text-xl font-bold text-navy-900 mb-2"
+              data-hr="Priprema i sigurnosna oprema" data-en="Safety Equipment Preparation">Priprema i sigurnosna oprema</h3>
+          <p class="text-gray-600"
+             data-hr="Naši instruktori vam pomažu s prslucima za spašavanje i kacigama te objašnjavaju postupak."
+             data-en="Our instructors help you with life vests and helmets and explain the procedure.">
+            Naši instruktori vam pomažu s prslucima za spašavanje i kacigama te objašnjavaju postupak.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number bg-ocean-500 text-white mx-auto mb-4">3</div>
+          <h3 class="text-xl font-bold text-navy-900 mb-2"
+              data-hr="Let iznad mora" data-en="Flight Above the Sea">Let iznad mora</h3>
+          <p class="text-gray-600"
+             data-hr="Uživajte u letu na visini do 100 metara s pogledom na otoke i obalu."
+             data-en="Enjoy a flight up to 100 meters high with views of the islands and coastline.">
+            Uživajte u letu na visini do 100 metara s pogledom na otoke i obalu.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number bg-ocean-500 text-white mx-auto mb-4">4</div>
+          <h3 class="text-xl font-bold text-navy-900 mb-2"
+              data-hr="Sigurno slijetanje" data-en="Safe Landing">Sigurno slijetanje</h3>
+          <p class="text-gray-600"
+             data-hr="Nježno slijetanje natrag na brod ili platformu — suho ili s kupanjem, vaš izbor!"
+             data-en="Gentle landing back on the boat or platform — dry or with a dip, your choice!">
+            Nježno slijetanje natrag na brod ili platformu — suho ili s kupanjem, vaš izbor!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DETAILS / SPECS ===== -->
+  <section class="py-20 lg:py-28 bg-ocean-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="text-ocean-500 font-semibold tracking-wider uppercase mb-2"
+           data-hr="Detalji usluge" data-en="Service Details">Detalji usluge</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-navy-900"
+            data-hr="Sve što trebate znati" data-en="Everything You Need to Know">Sve što trebate znati</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Duration -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="text-3xl mb-3">⏱️</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2"
+              data-hr="Trajanje" data-en="Duration">Trajanje</h3>
+          <p class="text-gray-600"
+             data-hr="Let: 10, 12 ili 15 minuta. Ukupno trajanje s vožnjom brodom: oko 1 sat."
+             data-en="Flight: 10, 12 or 15 minutes. Total duration including boat ride: approximately 1 hour.">
+            Let: 10, 12 ili 15 minuta. Ukupno trajanje s vožnjom brodom: oko 1 sat.
+          </p>
+        </div>
+
+        <!-- Capacity -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm service-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="text-3xl mb-3">👥</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2"
+              data-hr="Kapacitet" data-en="Capacity">Kapacitet</h3>
+          <p class="text-gray-600"
+             data-hr="Maksimalno 3 osobe istovremeno. Maksimalna ukupna težina: 220 kg."
+             data-en="Maximum 3 persons at the same time. Maximum total weight: 220 kg.">
+            Maksimalno 3 osobe istovremeno. Maksimalna ukupna težina: 220 kg.
+          </p>
+        </div>
+
+        <!-- Min Age -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-3xl mb-3">👶</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2"
+              data-hr="Minimalna dob" data-en="Minimum Age">Minimalna dob</h3>
+          <p class="text-gray-600"
+             data-hr="6 godina. Djeca lete u pratnji odrasle osobe. Maloljetnici trebaju pisanu dozvolu roditelja."
+             data-en="6 years. Children fly accompanied by an adult. Minors require written parental permission.">
+            6 godina. Djeca lete u pratnji odrasle osobe. Maloljetnici trebaju pisanu dozvolu roditelja.
+          </p>
+        </div>
+
+        <!-- Languages -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm service-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="text-3xl mb-3">🗣️</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2"
+              data-hr="Jezici" data-en="Languages">Jezici</h3>
+          <p class="text-gray-600"
+             data-hr="Hrvatski, engleski, češki."
+             data-en="Croatian, English, Czech.">
+            Hrvatski, engleski, češki.
+          </p>
+        </div>
+
+        <!-- Season -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-3xl mb-3">📅</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2"
+              data-hr="Sezona" data-en="Season">Sezona</h3>
+          <p class="text-gray-600"
+             data-hr="Ožujak – prosinac, ovisno o vremenskim uvjetima."
+             data-en="March – December, weather permitting.">
+            Ožujak – prosinac, ovisno o vremenskim uvjetima.
+          </p>
+        </div>
+
+        <!-- Included -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm service-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="text-3xl mb-3">✅</div>
+          <h3 class="text-lg font-bold text-navy-900 mb-2"
+              data-hr="Uključeno" data-en="Included">Uključeno</h3>
+          <p class="text-gray-600"
+             data-hr="Prsluk za spašavanje i sigurnosna kaciga uključeni u cijenu."
+             data-en="Life vest and safety helmet included in the price.">
+            Prsluk za spašavanje i sigurnosna kaciga uključeni u cijenu.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT TO BRING ===== -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="text-ocean-500 font-semibold tracking-wider uppercase mb-2"
+           data-hr="Priprema" data-en="Preparation">Priprema</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-navy-900"
+            data-hr="Što ponijeti sa sobom" data-en="What to Bring">Što ponijeti sa sobom</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="flex items-center gap-4 bg-ocean-50 rounded-xl p-5" data-aos="fade-up" data-aos-delay="0">
+          <span class="text-2xl">👙</span>
+          <span class="text-navy-900 font-medium" data-hr="Kupaći kostim" data-en="Swimwear">Kupaći kostim</span>
+        </div>
+        <div class="flex items-center gap-4 bg-ocean-50 rounded-xl p-5" data-aos="fade-up" data-aos-delay="50">
+          <span class="text-2xl">🕶️</span>
+          <span class="text-navy-900 font-medium" data-hr="Sunčane naočale" data-en="Sunglasses">Sunčane naočale</span>
+        </div>
+        <div class="flex items-center gap-4 bg-ocean-50 rounded-xl p-5" data-aos="fade-up" data-aos-delay="100">
+          <span class="text-2xl">🧴</span>
+          <span class="text-navy-900 font-medium" data-hr="Krema za sunčanje" data-en="Sunscreen">Krema za sunčanje</span>
+        </div>
+        <div class="flex items-center gap-4 bg-ocean-50 rounded-xl p-5" data-aos="fade-up" data-aos-delay="150">
+          <span class="text-2xl">🏖️</span>
+          <span class="text-navy-900 font-medium" data-hr="Ručnik" data-en="Towel">Ručnik</span>
+        </div>
+        <div class="flex items-center gap-4 bg-ocean-50 rounded-xl p-5" data-aos="fade-up" data-aos-delay="200">
+          <span class="text-2xl">📱</span>
+          <span class="text-navy-900 font-medium" data-hr="Vodootporna futrola za mobitel" data-en="Waterproof Phone Case">Vodootporna futrola za mobitel</span>
+        </div>
+        <div class="flex items-center gap-4 bg-ocean-50 rounded-xl p-5" data-aos="fade-up" data-aos-delay="250">
+          <span class="text-2xl">💧</span>
+          <span class="text-navy-900 font-medium" data-hr="Boca vode" data-en="Water Bottle">Boca vode</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SAFETY ===== -->
+  <section class="py-20 lg:py-28 bg-navy-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="text-ocean-400 font-semibold tracking-wider uppercase mb-2"
+           data-hr="Vaša sigurnost" data-en="Your Safety">Vaša sigurnost</p>
+        <h2 class="text-3xl md:text-5xl font-bold"
+            data-hr="Sigurnost na prvom mjestu" data-en="Safety First">Sigurnost na prvom mjestu</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="glass-card rounded-2xl p-6 text-center" data-aos="fade-up" data-aos-delay="0">
+          <div class="text-4xl mb-4">🦶</div>
+          <h3 class="text-xl font-bold mb-3"
+              data-hr="Ukrcavanje bosonogih" data-en="Barefoot Boarding">Ukrcavanje bosonogih</h3>
+          <p class="text-white/70"
+             data-hr="Ukrcavanje i iskrcavanje bez obuće za maksimalnu sigurnost na palubi broda."
+             data-en="Boarding and disembarking barefoot for maximum safety on the boat deck.">
+            Ukrcavanje i iskrcavanje bez obuće za maksimalnu sigurnost na palubi broda.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-4xl mb-4">🌤️</div>
+          <h3 class="text-xl font-bold mb-3"
+              data-hr="Praćenje vremena" data-en="Weather Monitoring">Praćenje vremena</h3>
+          <p class="text-white/70"
+             data-hr="Stalno pratimo vremenske uvjete. Letovi se otkazuju u slučaju jakog vjetra ili oluje."
+             data-en="We constantly monitor weather conditions. Flights are cancelled in case of strong wind or storms.">
+            Stalno pratimo vremenske uvjete. Letovi se otkazuju u slučaju jakog vjetra ili oluje.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl mb-4">🛡️</div>
+          <h3 class="text-xl font-bold mb-3"
+              data-hr="Certificirana oprema" data-en="Certified Equipment">Certificirana oprema</h3>
+          <p class="text-white/70"
+             data-hr="Sva oprema je certificirana i redovito pregledana prema europskim sigurnosnim standardima."
+             data-en="All equipment is certified and regularly inspected according to European safety standards.">
+            Sva oprema je certificirana i redovito pregledana prema europskim sigurnosnim standardima.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="text-ocean-500 font-semibold tracking-wider uppercase mb-2"
+           data-hr="Cijene" data-en="Pricing">Cijene</p>
+        <h2 class="text-3xl md:text-5xl font-bold text-navy-900"
+            data-hr="Odaberite svoj let" data-en="Choose Your Flight">Odaberite svoj let</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Solo -->
+        <div class="pricing-card bg-white rounded-2xl p-8 shadow-lg text-center" data-aos="fade-up" data-aos-delay="0">
+          <div class="text-4xl mb-4">🪂</div>
+          <h3 class="text-2xl font-bold text-navy-900 mb-2">Solo</h3>
+          <p class="text-gray-500 mb-6"
+             data-hr="1 osoba" data-en="1 person">1 osoba</p>
+          <div class="text-4xl font-black text-ocean-600 mb-2"
+               data-hr="od €XX" data-en="from €XX">od €XX</div>
+          <p class="text-sm text-gray-400 mb-6"
+             data-hr="10–15 min leta" data-en="10–15 min flight">10–15 min leta</p>
+          <a href="contact.html" class="block w-full bg-ocean-500 hover:bg-ocean-600 text-white py-3 rounded-full font-semibold transition"
+             data-hr="Rezerviraj" data-en="Book Now">Rezerviraj</a>
+        </div>
+
+        <!-- Duo (Featured) -->
+        <div class="pricing-card featured bg-white rounded-2xl p-8 shadow-lg text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-sand-500 text-white text-sm font-bold px-4 py-1 rounded-full"
+               data-hr="Najpopularniji" data-en="Most Popular">Najpopularniji</div>
+          <div class="text-4xl mb-4">🪂🪂</div>
+          <h3 class="text-2xl font-bold text-navy-900 mb-2">Duo</h3>
+          <p class="text-gray-500 mb-6"
+             data-hr="2 osobe" data-en="2 persons">2 osobe</p>
+          <div class="text-4xl font-black text-ocean-600 mb-2"
+               data-hr="od €XX" data-en="from €XX">od €XX</div>
+          <p class="text-sm text-gray-400 mb-6"
+             data-hr="10–15 min leta" data-en="10–15 min flight">10–15 min leta</p>
+          <a href="contact.html" class="block w-full bg-sand-500 hover:bg-sand-600 text-white py-3 rounded-full font-semibold transition"
+             data-hr="Rezerviraj" data-en="Book Now">Rezerviraj</a>
+        </div>
+
+        <!-- Triple -->
+        <div class="pricing-card bg-white rounded-2xl p-8 shadow-lg text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl mb-4">🪂🪂🪂</div>
+          <h3 class="text-2xl font-bold text-navy-900 mb-2">Triple</h3>
+          <p class="text-gray-500 mb-6"
+             data-hr="3 osobe (maks. 220 kg)" data-en="3 persons (max. 220 kg)">3 osobe (maks. 220 kg)</p>
+          <div class="text-4xl font-black text-ocean-600 mb-2"
+               data-hr="od €XX" data-en="from €XX">od €XX</div>
+          <p class="text-sm text-gray-400 mb-6"
+             data-hr="10–15 min leta" data-en="10–15 min flight">10–15 min leta</p>
+          <a href="contact.html" class="block w-full bg-ocean-500 hover:bg-ocean-600 text-white py-3 rounded-full font-semibold transition"
+             data-hr="Rezerviraj" data-en="Book Now">Rezerviraj</a>
+        </div>
+      </div>
+
+      <p class="text-center text-gray-500 mt-8 text-sm" data-aos="fade-up"
+         data-hr="* Cijene su orijentacijske. Kontaktirajte nas za točnu cijenu i dostupne termine."
+         data-en="* Prices are indicative. Contact us for exact pricing and available time slots.">
+        * Cijene su orijentacijske. Kontaktirajte nas za točnu cijenu i dostupne termine.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="py-20 lg:py-28 wave-divider-dark" style="background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 50%, #0ea5e9 100%);">
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6" data-aos="fade-up"
+          data-hr="Spremni za nezaboravan let?" data-en="Ready for an Unforgettable Flight?">Spremni za nezaboravan let?</h2>
+      <p class="text-white/80 text-lg md:text-xl mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100"
+         data-hr="Rezervirajte svoj parasailing doživljaj i letite iznad najljepšeg dijela Jadrana!"
+         data-en="Book your parasailing experience and fly above the most beautiful part of the Adriatic!">
+        Rezervirajte svoj parasailing doživljaj i letite iznad najljepšeg dijela Jadrana!
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+        <a href="contact.html" class="bg-sand-500 hover:bg-sand-600 text-white px-8 py-4 rounded-full font-bold text-lg transition cta-pulse"
+           data-hr="Rezerviraj odmah" data-en="Book Now">Rezerviraj odmah</a>
+        <a href="tel:+38598293352" class="border-2 border-white/30 hover:border-white/60 text-white px-8 py-4 rounded-full font-semibold text-lg transition"
+           data-hr="Nazovite: 098 293 352" data-en="Call: 098 293 352">Nazovite: 098 293 352</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-navy-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-3xl">🪂</span>
+            <span class="font-bold text-lg">Parasailing Živogošće</span>
+          </div>
+          <p class="text-white/60" data-i18n="footer-operator">Operator: Mirino obrt</p>
+          <p class="text-white/60" data-i18n="footer-location">Plaža Porat, Živogošće, Hrvatska</p>
+          <p class="text-white/60" data-i18n="footer-season">Sezona: Ožujak – Prosinac</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4" data-i18n="footer-quick">Brzi linkovi</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="parasailing.html" class="hover:text-white transition">Parasailing</a></li>
+            <li><a href="rent-a-boat.html" class="hover:text-white transition">Rent a Boat</a></li>
+            <li><a href="jet-ski.html" class="hover:text-white transition">Jet Ski</a></li>
+            <li><a href="gallery.html" class="hover:text-white transition" data-i18n="nav-gallery">Galerija</a></li>
+            <li><a href="reviews.html" class="hover:text-white transition" data-i18n="nav-reviews">Recenzije</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4" data-i18n="footer-contact-title">Kontakt</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="tel:+38598293352" class="hover:text-white transition">📞 098 293 352</a></li>
+            <li><a href="mailto:nenadperic725@gmail.com" class="hover:text-white transition">✉️ nenadperic725@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-white/10 mb-6">
+      <p class="text-center text-white/40 text-sm">© 2025 Parasailing & Rent a Boat Živogošće Porat. <span data-i18n="footer-rights">Sva prava pridržana.</span></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

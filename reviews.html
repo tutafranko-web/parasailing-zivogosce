@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recenzije — Parasailing & Rent a Boat Živogošće Porat</title>
+  <meta name="description" content="Pročitajte recenzije naših zadovoljnih gostiju. Parasailing, rent a boat, jet ski i vodeni sportovi na plaži Porat u Živogošću.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪂</text></svg>">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ocean: { 50:'#f0f9ff', 100:'#e0f2fe', 200:'#bae6fd', 300:'#7dd3fc', 400:'#38bdf8', 500:'#0ea5e9', 600:'#0284c7', 700:'#0369a1', 800:'#075985', 900:'#0c4a6e' },
+            sand: { 400:'#fbbf24', 500:'#f59e0b', 600:'#d97706' },
+            navy: { 900:'#0F172A', 800:'#1E293B', 700:'#334155' }
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2">
+          <span class="text-3xl">🪂</span>
+          <span class="text-white font-bold text-lg hidden sm:block">Parasailing Živogošće</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="index.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-home">Početna</a>
+
+          <!-- Services Dropdown -->
+          <div id="services-dropdown" class="relative">
+            <button class="text-white/90 hover:text-white font-medium transition flex items-center gap-1" data-i18n="nav-services">
+              Usluge
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="services-panel" class="hidden absolute top-full left-0 mt-2 w-48 bg-navy-900/95 backdrop-blur-lg rounded-xl shadow-xl border border-white/10 py-2">
+              <a href="parasailing.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-parasailing">Parasailing</a>
+              <a href="rent-a-boat.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-boat">Rent a Boat</a>
+              <a href="jet-ski.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-jetski">Jet Ski</a>
+              <a href="banana-ride.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-banana">Banana Ride</a>
+              <a href="tubing.html" class="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition" data-i18n="nav-tubing">Tubing</a>
+            </div>
+          </div>
+
+          <a href="about.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-about">O nama</a>
+          <a href="gallery.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-gallery">Galerija</a>
+          <a href="reviews.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-reviews">Recenzije</a>
+          <a href="contact.html" class="text-white/90 hover:text-white font-medium transition" data-i18n="nav-contact">Kontakt</a>
+
+          <!-- Language Toggle -->
+          <div class="flex items-center bg-white/10 rounded-full p-1 ml-2">
+            <button class="lang-btn px-3 py-1 rounded-full text-sm font-medium" data-lang="hr" onclick="setLanguage('hr')">HR</button>
+            <button class="lang-btn px-3 py-1 rounded-full text-sm font-medium" data-lang="en" onclick="setLanguage('en')">EN</button>
+          </div>
+
+          <a href="contact.html" class="bg-sand-500 hover:bg-sand-600 text-white px-5 py-2.5 rounded-full font-semibold transition cta-pulse" data-i18n="nav-book">Rezerviraj</a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button id="menu-toggle" class="lg:hidden text-white p-2">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-navy-900/98 backdrop-blur-xl z-50 p-6 lg:hidden">
+      <button id="menu-close" class="absolute top-5 right-5 text-white">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="flex flex-col gap-4 mt-16">
+        <a href="index.html" class="text-white text-lg font-medium" data-i18n="nav-home">Početna</a>
+        <a href="parasailing.html" class="text-white/80 text-lg" data-i18n="nav-parasailing">Parasailing</a>
+        <a href="rent-a-boat.html" class="text-white/80 text-lg" data-i18n="nav-boat">Rent a Boat</a>
+        <a href="jet-ski.html" class="text-white/80 text-lg" data-i18n="nav-jetski">Jet Ski</a>
+        <a href="banana-ride.html" class="text-white/80 text-lg" data-i18n="nav-banana">Banana Ride</a>
+        <a href="tubing.html" class="text-white/80 text-lg" data-i18n="nav-tubing">Tubing</a>
+        <hr class="border-white/10">
+        <a href="about.html" class="text-white text-lg font-medium" data-i18n="nav-about">O nama</a>
+        <a href="gallery.html" class="text-white text-lg font-medium" data-i18n="nav-gallery">Galerija</a>
+        <a href="reviews.html" class="text-white text-lg font-medium" data-i18n="nav-reviews">Recenzije</a>
+        <a href="contact.html" class="text-white text-lg font-medium" data-i18n="nav-contact">Kontakt</a>
+        <div class="flex items-center gap-2 mt-4">
+          <button class="lang-btn px-4 py-2 rounded-full text-sm font-medium border border-white/20" data-lang="hr" onclick="setLanguage('hr')">HR</button>
+          <button class="lang-btn px-4 py-2 rounded-full text-sm font-medium border border-white/20" data-lang="en" onclick="setLanguage('en')">EN</button>
+        </div>
+        <a href="contact.html" class="bg-sand-500 text-white text-center px-5 py-3 rounded-full font-semibold mt-4" data-i18n="nav-book">Rezerviraj</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="relative py-32 md:py-40 flex items-center justify-center" style="background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 30%, #0ea5e9 60%, #38bdf8 100%);">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <h1 class="text-white text-4xl sm:text-5xl md:text-6xl font-black mb-4" data-aos="fade-up"
+          data-hr="Recenzije" data-en="Reviews">Recenzije</h1>
+      <p class="text-ocean-200 text-lg md:text-xl" data-aos="fade-up" data-aos-delay="100"
+         data-hr="Što naši gosti kažu o nama" data-en="What our guests say about us">Što naši gosti kažu o nama</p>
+    </div>
+  </section>
+
+  <!-- ===== RATING SUMMARY ===== -->
+  <section class="py-16 bg-ocean-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center" data-aos="fade-up">
+        <div class="text-7xl md:text-8xl font-black text-navy-900 mb-2">5.0</div>
+        <div class="flex items-center justify-center gap-1 mb-3">
+          <span class="star-filled text-sand-500 text-3xl">&#9733;</span>
+          <span class="star-filled text-sand-500 text-3xl">&#9733;</span>
+          <span class="star-filled text-sand-500 text-3xl">&#9733;</span>
+          <span class="star-filled text-sand-500 text-3xl">&#9733;</span>
+          <span class="star-filled text-sand-500 text-3xl">&#9733;</span>
+        </div>
+        <p class="text-gray-600 text-lg"
+           data-hr="Temelji se na 6 recenzija" data-en="Based on 6 reviews">Temelji se na 6 recenzija</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Review 1 -->
+        <div class="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up">
+          <div class="flex items-center gap-1 mb-3">
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+          </div>
+          <p class="text-gray-700 mb-4 leading-relaxed"
+             data-hr="Parasailing je bio nezaboravan! Pogled s visine na obalu i otoke je nevjerojatan. Ekipa je bila vrlo profesionalna i ljubazna. Osjećali smo se potpuno sigurno cijelo vrijeme. Topla preporuka!"
+             data-en="The parasailing was unforgettable! The view from above of the coastline and islands is incredible. The crew was very professional and friendly. We felt completely safe the entire time. Highly recommended!">
+            Parasailing je bio nezaboravan! Pogled s visine na obalu i otoke je nevjerojatan. Ekipa je bila vrlo profesionalna i ljubazna. Osjećali smo se potpuno sigurno cijelo vrijeme. Topla preporuka!
+          </p>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-semibold text-navy-900">Sergei T.</p>
+              <p class="text-sm text-gray-500" data-hr="Finska" data-en="Finland">Finska</p>
+            </div>
+            <p class="text-sm text-gray-400">15.07.2025.</p>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center gap-1 mb-3">
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+          </div>
+          <p class="text-gray-700 mb-4 leading-relaxed"
+             data-hr="Iznajmili smo brod za cijeli dan i istraživali skrivene uvale duž obale. Brod je bio u odličnom stanju, a upute za upravljanje jasne i detaljne. Savršen dan na moru!"
+             data-en="We rented a boat for the whole day and explored hidden coves along the coast. The boat was in excellent condition and the operating instructions were clear and detailed. A perfect day at sea!">
+            Iznajmili smo brod za cijeli dan i istraživali skrivene uvale duž obale. Brod je bio u odličnom stanju, a upute za upravljanje jasne i detaljne. Savršen dan na moru!
+          </p>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-semibold text-navy-900">Marco & Elena</p>
+              <p class="text-sm text-gray-500" data-hr="Italija" data-en="Italy">Italija</p>
+            </div>
+            <p class="text-sm text-gray-400">22.07.2025.</p>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center gap-1 mb-3">
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+          </div>
+          <p class="text-gray-700 mb-4 leading-relaxed"
+             data-hr="Jet ski vožnja je bila čisti adrenalin! Instruktor nas je pratio i dao korisne savjete. More je bilo kristalno čisto, a brzina nevjerojatna. Jedva čekamo doći opet sljedeće ljeto!"
+             data-en="The jet ski ride was pure adrenaline! The instructor followed us and gave useful tips. The sea was crystal clear and the speed was incredible. We can't wait to come back next summer!">
+            Jet ski vožnja je bila čisti adrenalin! Instruktor nas je pratio i dao korisne savjete. More je bilo kristalno čisto, a brzina nevjerojatna. Jedva čekamo doći opet sljedeće ljeto!
+          </p>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-semibold text-navy-900">Hans W.</p>
+              <p class="text-sm text-gray-500" data-hr="Njemačka" data-en="Germany">Njemačka</p>
+            </div>
+            <p class="text-sm text-gray-400">03.08.2025.</p>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up">
+          <div class="flex items-center gap-1 mb-3">
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+          </div>
+          <p class="text-gray-700 mb-4 leading-relaxed"
+             data-hr="Banana ride je bio savršen za nas i djecu! Toliko smijeha i uzbuđenja. Osoblje se pobrinulo da svi imaju prsluke za spašavanje i da je sve sigurno. Djeca još uvijek pričaju o tome!"
+             data-en="The banana ride was perfect for us and the kids! So much laughter and excitement. The staff made sure everyone had life jackets and everything was safe. The children are still talking about it!">
+            Banana ride je bio savršen za nas i djecu! Toliko smijeha i uzbuđenja. Osoblje se pobrinulo da svi imaju prsluke za spašavanje i da je sve sigurno. Djeca još uvijek pričaju o tome!
+          </p>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-semibold text-navy-900">Petra K.</p>
+              <p class="text-sm text-gray-500" data-hr="Češka" data-en="Czech Republic">Češka</p>
+            </div>
+            <p class="text-sm text-gray-400">10.08.2025.</p>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center gap-1 mb-3">
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+          </div>
+          <p class="text-gray-700 mb-4 leading-relaxed"
+             data-hr="Najbolji parasailing na cijeloj Makarskoj rivijeri! Letjeli smo u tandemu i pogled je bio spektakularan — vidjeli smo Hvar, Brač i cijelu obalu. Cijena je bila vrlo korektna za ovakvo iskustvo."
+             data-en="The best parasailing on the entire Makarska Riviera! We flew tandem and the view was spectacular — we could see Hvar, Brač and the entire coastline. The price was very fair for such an experience.">
+            Najbolji parasailing na cijeloj Makarskoj rivijeri! Letjeli smo u tandemu i pogled je bio spektakularan — vidjeli smo Hvar, Brač i cijelu obalu. Cijena je bila vrlo korektna za ovakvo iskustvo.
+          </p>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-semibold text-navy-900">James & Sarah</p>
+              <p class="text-sm text-gray-500" data-hr="Ujedinjeno Kraljevstvo" data-en="United Kingdom">Ujedinjeno Kraljevstvo</p>
+            </div>
+            <p class="text-sm text-gray-400">18.08.2025.</p>
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center gap-1 mb-3">
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+            <span class="star-filled text-sand-500 text-xl">&#9733;</span>
+          </div>
+          <p class="text-gray-700 mb-4 leading-relaxed"
+             data-hr="Tubing je bio genijalan! Puno zabave i adrenalina. Vozač broda je bio odličan — prilagodio je brzinu našim željama. Plaža Porat je prekrasna, a usluga na vrhunskoj razini. Svakako se vraćamo!"
+             data-en="Tubing was awesome! Lots of fun and adrenaline. The boat driver was excellent — he adjusted the speed to our wishes. Porat Beach is beautiful and the service is top-notch. We're definitely coming back!">
+            Tubing je bio genijalan! Puno zabave i adrenalina. Vozač broda je bio odličan — prilagodio je brzinu našim željama. Plaža Porat je prekrasna, a usluga na vrhunskoj razini. Svakako se vraćamo!
+          </p>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-semibold text-navy-900">Ana M.</p>
+              <p class="text-sm text-gray-500" data-hr="Slovenija" data-en="Slovenia">Slovenija</p>
+            </div>
+            <p class="text-sm text-gray-400">25.08.2025.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="py-20 bg-gradient-to-r from-ocean-700 to-ocean-500">
+    <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+      <h2 class="text-white text-3xl md:text-4xl font-bold mb-4"
+          data-hr="Bili ste naš gost?" data-en="Were you our guest?">Bili ste naš gost?</h2>
+      <p class="text-ocean-100 text-lg mb-8"
+         data-hr="Podijelite svoje iskustvo i pomozite drugima otkriti naše vodene avanture!" data-en="Share your experience and help others discover our water adventures!">Podijelite svoje iskustvo i pomozite drugima otkriti naše vodene avanture!</p>
+      <a href="https://www.google.com/maps/place/Parasailing+%26+Rent+a+Boat+%C5%BDivo%C5%A1%C4%87e+Porat" target="_blank" rel="noopener noreferrer"
+         class="inline-block bg-sand-500 hover:bg-sand-600 text-white px-8 py-4 rounded-full font-bold text-lg transition cta-pulse"
+         data-hr="Ostavite recenziju na Google Maps" data-en="Leave a review on Google Maps">Ostavite recenziju na Google Maps</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-navy-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-3xl">🪂</span>
+            <span class="font-bold text-lg">Parasailing Živogošće</span>
+          </div>
+          <p class="text-white/60" data-i18n="footer-operator">Operator: Mirino obrt</p>
+          <p class="text-white/60" data-i18n="footer-location">Plaža Porat, Živogošće, Hrvatska</p>
+          <p class="text-white/60" data-i18n="footer-season">Sezona: Ožujak – Prosinac</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4" data-i18n="footer-quick">Brzi linkovi</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="parasailing.html" class="hover:text-white transition">Parasailing</a></li>
+            <li><a href="rent-a-boat.html" class="hover:text-white transition">Rent a Boat</a></li>
+            <li><a href="jet-ski.html" class="hover:text-white transition">Jet Ski</a></li>
+            <li><a href="gallery.html" class="hover:text-white transition" data-i18n="nav-gallery">Galerija</a></li>
+            <li><a href="reviews.html" class="hover:text-white transition" data-i18n="nav-reviews">Recenzije</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4" data-i18n="footer-contact-title">Kontakt</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="tel:+38598293352" class="hover:text-white transition">📞 098 293 352</a></li>
+            <li><a href="mailto:nenadperic725@gmail.com" class="hover:text-white transition">✉️ nenadperic725@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-white/10 mb-6">
+      <p class="text-center text-white/40 text-sm">© 2025 Parasailing & Rent a Boat Živogošće Porat. <span data-i18n="footer-rights">Sva prava pridržana.</span></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
