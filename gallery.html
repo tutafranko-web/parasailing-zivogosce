@@ -171,8 +171,8 @@
   </nav>
 
   <!-- ===== HERO ===== -->
-  <section class="relative min-h-[50vh] flex items-center justify-center" style="background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 30%, #0ea5e9 60%, #38bdf8 100%);">
-    <div class="hero-overlay absolute inset-0"></div>
+  <section class="relative min-h-[50vh] flex items-center justify-center" style="background: url('images/parasailing-colorful.jpg') center/cover no-repeat;">
+    <div class="absolute inset-0 bg-gradient-to-b from-navy-900/60 via-ocean-900/40 to-ocean-800/60"></div>
     <div class="absolute top-20 left-10 w-72 h-72 bg-sand-500/10 rounded-full blur-3xl"></div>
     <div class="absolute bottom-10 right-10 w-96 h-96 bg-ocean-400/10 rounded-full blur-3xl"></div>
 
@@ -212,7 +212,8 @@
 
         <!-- Parasailing 1 -->
         <div class="gallery-item" data-category="parasailing" data-aos="fade-up">
-          <div class="placeholder-img h-64 rounded-xl flex items-end" style="background: linear-gradient(135deg, #0369a1 0%, #38bdf8 50%, #7dd3fc 100%);">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/parasailing-1.webp')">
+            <img src="images/parasailing-1.webp" alt="Parasailing iznad Živogošća" class="w-full h-full object-cover" loading="lazy">
             <div class="overlay">
               <p class="text-white font-semibold text-sm" data-hr="Parasailing iznad Živogošća" data-en="Parasailing above Živogošće">Parasailing iznad Živogošća</p>
             </div>
@@ -221,99 +222,150 @@
 
         <!-- Parasailing 2 -->
         <div class="gallery-item" data-category="parasailing" data-aos="fade-up" data-aos-delay="50">
-          <div class="placeholder-img h-64 rounded-xl flex items-end" style="background: linear-gradient(160deg, #0c4a6e 0%, #0ea5e9 60%, #bae6fd 100%);">
-            <div class="overlay">
-              <p class="text-white font-semibold text-sm" data-hr="Pogled s visine na Makarsku rivijeru" data-en="Aerial view of Makarska Riviera">Pogled s visine na Makarsku rivijeru</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Parasailing 3 -->
-        <div class="gallery-item" data-category="parasailing" data-aos="fade-up" data-aos-delay="100">
-          <div class="placeholder-img h-64 rounded-xl flex items-end" style="background: linear-gradient(180deg, #075985 0%, #0284c7 40%, #38bdf8 100%);">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/parasailing-2.webp')">
+            <img src="images/parasailing-2.webp" alt="Par uživa u parasailingu" class="w-full h-full object-cover" loading="lazy">
             <div class="overlay">
               <p class="text-white font-semibold text-sm" data-hr="Par uživa u parasailingu" data-en="Couple enjoying parasailing">Par uživa u parasailingu</p>
             </div>
           </div>
         </div>
 
-        <!-- Boat 1 -->
-        <div class="gallery-item" data-category="boat" data-aos="fade-up" data-aos-delay="150">
-          <div class="placeholder-img h-64 rounded-xl flex items-end" style="background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 50%, #99f6e4 100%);">
+        <!-- Parasailing 3 - Colorful chute -->
+        <div class="gallery-item" data-category="parasailing" data-aos="fade-up" data-aos-delay="100">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/parasailing-colorful.jpg')">
+            <img src="images/parasailing-colorful.jpg" alt="Šareni parasailing padobran" class="w-full h-full object-cover" loading="lazy">
             <div class="overlay">
-              <p class="text-white font-semibold text-sm" data-hr="Izlet brodom uz obalu" data-en="Boat trip along the coast">Izlet brodom uz obalu</p>
+              <p class="text-white font-semibold text-sm" data-hr="Šareni parasailing padobran" data-en="Colorful parasailing chute">Šareni parasailing padobran</p>
             </div>
           </div>
         </div>
 
-        <!-- Boat 2 -->
+        <!-- Parasailing 4 - Prep -->
+        <div class="gallery-item" data-category="parasailing" data-aos="fade-up" data-aos-delay="150">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/parasailing-prep.webp')">
+            <img src="images/parasailing-prep.webp" alt="Priprema parasailinga na brodu" class="w-full h-full object-cover" loading="lazy">
+            <div class="overlay">
+              <p class="text-white font-semibold text-sm" data-hr="Priprema parasailinga na brodu" data-en="Preparing parasail on the boat">Priprema parasailinga na brodu</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Boat 1 - Wake -->
         <div class="gallery-item" data-category="boat" data-aos="fade-up">
-          <div class="placeholder-img h-64 rounded-xl flex items-end" style="background: linear-gradient(160deg, #065f46 0%, #10b981 50%, #6ee7b7 100%);">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/boat-wake.jpg')">
+            <img src="images/boat-wake.jpg" alt="Vožnja brodom uz obalu" class="w-full h-full object-cover" loading="lazy">
             <div class="overlay">
-              <p class="text-white font-semibold text-sm" data-hr="Brod na kristalno čistom moru" data-en="Boat on crystal clear sea">Brod na kristalno čistom moru</p>
+              <p class="text-white font-semibold text-sm" data-hr="Vožnja brodom uz obalu" data-en="Boat ride along the coast">Vožnja brodom uz obalu</p>
             </div>
           </div>
         </div>
 
-        <!-- Jet Ski 1 -->
-        <div class="gallery-item" data-category="jetski" data-aos="fade-up" data-aos-delay="50">
-          <div class="placeholder-img h-64 rounded-xl flex items-end" style="background: linear-gradient(135deg, #0F172A 0%, #1e3a5f 50%, #1e40af 100%);">
+        <!-- Boat 2 - Beach with boat -->
+        <div class="gallery-item" data-category="boat" data-aos="fade-up" data-aos-delay="50">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/beach-boat.webp')">
+            <img src="images/beach-boat.webp" alt="Brod na plaži Porat" class="w-full h-full object-cover" loading="lazy">
+            <div class="overlay">
+              <p class="text-white font-semibold text-sm" data-hr="Brod na plaži Porat" data-en="Boat at Porat Beach">Brod na plaži Porat</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jet Ski -->
+        <div class="gallery-item" data-category="jetski" data-aos="fade-up" data-aos-delay="100">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/jetski-1.webp')">
+            <img src="images/jetski-1.webp" alt="Jet ski na Jadranu" class="w-full h-full object-cover" loading="lazy">
             <div class="overlay">
               <p class="text-white font-semibold text-sm" data-hr="Jet ski adrenalin" data-en="Jet ski adrenaline">Jet ski adrenalin</p>
             </div>
           </div>
         </div>
 
-        <!-- Jet Ski 2 -->
-        <div class="gallery-item" data-category="jetski" data-aos="fade-up" data-aos-delay="100">
-          <div class="placeholder-img h-64 rounded-xl flex items-end" style="background: linear-gradient(160deg, #1E293B 0%, #1e3a8a 60%, #3b82f6 100%);">
-            <div class="overlay">
-              <p class="text-white font-semibold text-sm" data-hr="Brza vožnja jet skija" data-en="Fast jet ski ride">Brza vožnja jet skija</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Banana 1 -->
-        <div class="gallery-item" data-category="banana" data-aos="fade-up" data-aos-delay="150">
-          <div class="placeholder-img h-64 rounded-xl flex items-end" style="background: linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #fbbf24 100%);">
-            <div class="overlay">
-              <p class="text-white font-semibold text-sm" data-hr="Banana ride zabava" data-en="Banana ride fun">Banana ride zabava</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Banana 2 -->
-        <div class="gallery-item" data-category="banana" data-aos="fade-up">
-          <div class="placeholder-img h-64 rounded-xl flex items-end" style="background: linear-gradient(160deg, #b45309 0%, #f59e0b 40%, #fde68a 100%);">
-            <div class="overlay">
-              <p class="text-white font-semibold text-sm" data-hr="Obitelj na banana rideu" data-en="Family on banana ride">Obitelj na banana rideu</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tubing 1 -->
-        <div class="gallery-item" data-category="tubing" data-aos="fade-up" data-aos-delay="50">
-          <div class="placeholder-img h-64 rounded-xl flex items-end" style="background: linear-gradient(135deg, #0891b2 0%, #22d3ee 50%, #67e8f9 100%);">
+        <!-- Tubing 1 - Sofa -->
+        <div class="gallery-item" data-category="tubing" data-aos="fade-up" data-aos-delay="150">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/tubing-sofa.jpg')">
+            <img src="images/tubing-sofa.jpg" alt="Tubing na moru" class="w-full h-full object-cover" loading="lazy">
             <div class="overlay">
               <p class="text-white font-semibold text-sm" data-hr="Tubing na valovima" data-en="Tubing on the waves">Tubing na valovima</p>
             </div>
           </div>
         </div>
 
-        <!-- Tubing 2 -->
-        <div class="gallery-item" data-category="tubing" data-aos="fade-up" data-aos-delay="100">
-          <div class="placeholder-img h-64 rounded-xl flex items-end" style="background: linear-gradient(160deg, #155e75 0%, #06b6d4 50%, #a5f3fc 100%);">
+        <!-- Tubing 2 - Group -->
+        <div class="gallery-item" data-category="tubing" data-aos="fade-up">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/tubing-group.jpg')">
+            <img src="images/tubing-group.jpg" alt="Grupni tubing" class="w-full h-full object-cover" loading="lazy">
             <div class="overlay">
-              <p class="text-white font-semibold text-sm" data-hr="Adrenalin na tubingu" data-en="Tubing adrenaline">Adrenalin na tubingu</p>
+              <p class="text-white font-semibold text-sm" data-hr="Grupna zabava na vodi" data-en="Group water fun">Grupna zabava na vodi</p>
             </div>
           </div>
         </div>
 
-        <!-- Parasailing 4 -->
-        <div class="gallery-item" data-category="parasailing" data-aos="fade-up" data-aos-delay="150">
-          <div class="placeholder-img h-64 rounded-xl flex items-end" style="background: linear-gradient(135deg, #0284c7 0%, #38bdf8 40%, #e0f2fe 100%);">
+        <!-- Beach base -->
+        <div class="gallery-item" data-category="boat" data-aos="fade-up" data-aos-delay="50">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/beach-base.webp')">
+            <img src="images/beach-base.webp" alt="Plaža Porat baza" class="w-full h-full object-cover" loading="lazy">
             <div class="overlay">
-              <p class="text-white font-semibold text-sm" data-hr="Zalazak sunca s parasailinga" data-en="Sunset from parasailing">Zalazak sunca s parasailinga</p>
+              <p class="text-white font-semibold text-sm" data-hr="Naša baza na plaži Porat" data-en="Our base at Porat Beach">Naša baza na plaži Porat</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beach sunset -->
+        <div class="gallery-item" data-category="parasailing" data-aos="fade-up" data-aos-delay="100">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/beach-sunset.webp')">
+            <img src="images/beach-sunset.webp" alt="Zalazak sunca na plaži" class="w-full h-full object-cover" loading="lazy">
+            <div class="overlay">
+              <p class="text-white font-semibold text-sm" data-hr="Zalazak sunca na plaži Živogošće" data-en="Sunset at Živogošće beach">Zalazak sunca na plaži Živogošće</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sunset shelter -->
+        <div class="gallery-item" data-category="boat" data-aos="fade-up" data-aos-delay="150">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/sunset-shelter.webp')">
+            <img src="images/sunset-shelter.webp" alt="Zalazak sunca s plaže" class="w-full h-full object-cover" loading="lazy">
+            <div class="overlay">
+              <p class="text-white font-semibold text-sm" data-hr="Zlatni zalazak sunca" data-en="Golden sunset">Zlatni zalazak sunca</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coastline -->
+        <div class="gallery-item" data-category="boat" data-aos="fade-up">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/coastline.webp')">
+            <img src="images/coastline.webp" alt="Obala Živogošća" class="w-full h-full object-cover" loading="lazy">
+            <div class="overlay">
+              <p class="text-white font-semibold text-sm" data-hr="Obala Makarske rivijere" data-en="Makarska Riviera coastline">Obala Makarske rivijere</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sea view -->
+        <div class="gallery-item" data-category="boat" data-aos="fade-up" data-aos-delay="50">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/sea-view.jpg')">
+            <img src="images/sea-view.jpg" alt="Pogled na more" class="w-full h-full object-cover" loading="lazy">
+            <div class="overlay">
+              <p class="text-white font-semibold text-sm" data-hr="Pogled s broda na obalu" data-en="View from the boat">Pogled s broda na obalu</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beach equipment -->
+        <div class="gallery-item" data-category="banana" data-aos="fade-up" data-aos-delay="100">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/beach-equipment.webp')">
+            <img src="images/beach-equipment.webp" alt="Oprema na plaži" class="w-full h-full object-cover" loading="lazy">
+            <div class="overlay">
+              <p class="text-white font-semibold text-sm" data-hr="Oprema za vodene sportove" data-en="Water sports equipment">Oprema za vodene sportove</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Price board -->
+        <div class="gallery-item" data-category="parasailing" data-aos="fade-up" data-aos-delay="150">
+          <div class="placeholder-img h-64 rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox('images/price-board.webp')">
+            <img src="images/price-board.webp" alt="Cjenik parasailinga" class="w-full h-full object-cover" loading="lazy">
+            <div class="overlay">
+              <p class="text-white font-semibold text-sm" data-hr="Naš cjenik na plaži" data-en="Our price board at the beach">Naš cjenik na plaži</p>
             </div>
           </div>
         </div>
